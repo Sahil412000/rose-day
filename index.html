@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rose Day — A small journey</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="noise" aria-hidden="true"></div>
+
+    <main class="stage">
+      <!-- Journey progress -->
+      <div class="journey-dots" id="journeyDots" aria-hidden="true">
+        <span class="dot" data-step="0"></span>
+        <span class="dot" data-step="1"></span>
+        <span class="dot" data-step="2"></span>
+        <span class="dot" data-step="3"></span>
+        <span class="dot" data-step="4"></span>
+        <span class="dot" data-step="5"></span>
+      </div>
+
+      <!-- Step 0: Open -->
+      <section class="step active" data-step="0" id="step0">
+        <p class="step-text">Someone thought of you today.</p>
+        <button type="button" class="next-btn" aria-label="Continue">
+          tap to begin
+        </button>
+      </section>
+
+      <!-- Step 1 -->
+      <section class="step" data-step="1" id="step1">
+        <p class="step-text">
+          They wanted to send you something small.<br />A rose. A few words.
+        </p>
+        <button type="button" class="next-btn" aria-label="Continue">
+          continue
+        </button>
+      </section>
+
+      <!-- Step 2 -->
+      <section class="step" data-step="2" id="step2">
+        <p class="step-text">Small things can hold big feelings.</p>
+        <button type="button" class="next-btn" aria-label="Continue">
+          continue
+        </button>
+      </section>
+
+      <!-- Step 3 -->
+      <section class="step" data-step="3" id="step3">
+        <p class="step-text">This one is for you.<br /><em>Yes, you.</em></p>
+        <button type="button" class="next-btn" aria-label="Continue">
+          continue
+        </button>
+      </section>
+
+      <!-- Step 4: Hold the rose -->
+      <section class="step" data-step="4" id="step4">
+        <p class="step-text">Hold it for a moment.<br />Don’t let go.</p>
+        <div class="rose-zone" id="roseZone">
+          <div class="hold-ring" id="holdRing" aria-hidden="true">
+            <span class="hold-ring-fill" id="holdRingFill"></span>
+          </div>
+          <div class="rose-hold" id="roseHold">
+            <span class="bud"></span>
+            <span class="leaf l1"></span>
+            <span class="leaf l2"></span>
+          </div>
+        </div>
+        <p class="hint" id="hint">press & hold the rose</p>
+      </section>
+
+      <!-- Step 5: Bloom + closing message -->
+      <section class="step" data-step="5" id="step5">
+        <div class="rose-bloom" id="bloomRose">
+          <span class="p p1"></span>
+          <span class="p p2"></span>
+          <span class="p p3"></span>
+          <span class="p p4"></span>
+          <span class="p p5"></span>
+          <span class="p p6"></span>
+          <span class="center"></span>
+        </div>
+        <p class="step-text closing">Happy Rose Day, Tia!</p>
+        <p class="step-text closing sub">
+          You’re seen. You’re valued.<br />Thank you for being you.
+        </p>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
